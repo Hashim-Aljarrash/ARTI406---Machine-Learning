@@ -1,33 +1,56 @@
-# Chocolate Sales Dataset
+# Raw Sales Dataset
 
-## Data Source
-Chocolate sales records from an international confectionery company (Jan 2022 - Aug 2024)
+## Overview
 
-## Columns
+The Raw Sales Dataset contains real estate transaction data.
+Each row represents a property sale, including information about
+when the property was sold, its price, location, and property characteristics.
 
-| Column | Description | Type |
-|--------|-------------|------|
-| Sales Person | Name of sales representative | Text |
-| Country | Country where sale occurred | Text |
-| Product | Name of chocolate product | Text |
-| Date | Transaction date (DD-MM-YYYY) | Date |
-| Amount | Revenue in US dollars | Numeric |
-| Boxes Shipped | Number of boxes shipped | Integer |
+This dataset can be used for:
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Time-series trend analysis
+- Building regression models to predict property prices
 
-## Countries
-Australia, UK, India, USA, Canada, New Zealand
 
-## Products
-22 different products including Eclairs, Mint Chip Choco, 85% Dark Bars, etc.
+## Dataset Features
 
-## Data Stats
-- 3,284 transactions
-- 6 countries
-- 22 products
-- Revenue range: $7 - $26,170 per transaction
+### 1. datesold
+- The date when the property was sold.
+- Format: YYYY-MM-DD
+- Useful for analyzing trends over time.
 
-## Data Issues
-- 1 missing Country value (first row)
-- 1 duplicate row (rows 13-14)
-- Date needed formatting
-- Amount had $ and commas removed
+### 2. postcode
+- The postal code of the property location.
+- Represents the geographic area.
+- Can be used to group and compare regions.
+
+### 3. price
+- The sale price of the property.
+- Numeric variable.
+- Typically used as the target variable in prediction models.
+
+### 4. propertyType
+- The type of property sold (e.g., house, unit).
+- Categorical variable.
+
+### 5. bedrooms
+- Number of bedrooms in the property.
+- Numeric variable.
+- Often related to property price.
+
+
+## Dataset Structure
+
+- Each row represents one property sale.
+- The dataset contains 5 main columns.
+- Suitable for regression analysis and visualization tasks.
+
+
+## Possible Analysis
+
+- Price distribution analysis
+- Sales trends over time
+- Revenue comparison by postcode
+- Comparison between property types
+- Price prediction using machine learning
